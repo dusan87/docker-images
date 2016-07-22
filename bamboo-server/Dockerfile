@@ -22,7 +22,7 @@ ADD bamboo-server.sh /etc/service/bamboo-server/run
 # Make sure we get latet packages
 RUN apt-get update && apt-get upgrade -y # 22.08.2016
 
-# Install Java OpenJDK 7 and VCS tools
+# Install Java OpenJDK 8 and VCS tools
 RUN apt-get install -yq python-software-properties && add-apt-repository ppa:webupd8team/java -y && apt-get update
 RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 RUN apt-get install -yq oracle-java8-installer git subversion
