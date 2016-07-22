@@ -2,8 +2,8 @@
 
 set -e # Exit on errors
 
-for image in base supervisord bamboo-server bamboo-agent
+for image in bamboo-server 
 do
     echo "=> Building $image ..."
-    docker build -rm -t hwuethrich/$image $image
+    docker build -rm -t dusan87/$image:latest $image
 done
